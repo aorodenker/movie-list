@@ -1,11 +1,13 @@
 import React from 'react';
-import movies from '../components/MoviesExample.jsx';
 
-var MovieListBuild = ({movies}) => (
+var MovieListBuild = (props) => (
   <div>
     <div>
-      {movies.title}
+      {props.movie.title}
     </div>
+    <button className='watchedtoggle'
+    onClick={() => {props.toggleWatched(props.index)}}
+    >Watched</button>
   </div>
 )
 
